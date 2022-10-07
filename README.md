@@ -6,10 +6,10 @@ We are competing in the **Global Adoption** track. We aim to maximize global ado
 
 You are welcome to participate. Join our [Telegram group](https://t.me/+45UVneqhSJQ5MDAx) and introduce yourself.
 
-![globe](https://user-images.githubusercontent.com/14167547/194671555-18e7e2f0-3bc2-4319-9c11-012a070d5536.png)
-
 ## What we're building
 
 A location-based social app in a fun 3D map.
 
 Think "Pokémon Go" for real-world commerce, powered by Lightning and Nostr.
+
+![globe](https://user-images.githubusercontent.com/14167547/194671555-18e7e2f0-3bc2-4319-9c11-012a070d5536.png)
