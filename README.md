@@ -8,8 +8,13 @@ You are welcome to participate. Join our [Telegram group](https://t.me/+45UVneqh
 
 ## What we're building
 
-A location-based social app in a fun 3D map.
+A location-based social app with a fun 3D map.
 
 Think "Pokémon Go" for real-world commerce, powered by Lightning and Nostr.
+
+## Resources
+
+- [Intro to React Native](https://arcadelabs.co/articles/intro-to-react-native)
+
 
 ![globe](https://user-images.githubusercontent.com/14167547/194671555-18e7e2f0-3bc2-4319-9c11-012a070d5536.png)
