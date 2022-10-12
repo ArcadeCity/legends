@@ -7395,6 +7395,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fathom-client@npm:3.5.0":
+  version: 3.5.0
+  resolution: "fathom-client@npm:3.5.0"
+  checksum: 16299bd50dc6bcc716a0d6c81fdad65272ff4f08d68695b64b00e19a04de14771c96ddc1205ce7c4220eddd0d3cf70c65ee9c8fb32b8b776ef155faf61e44479
+  languageName: node
+  linkType: hard
+
 "fb-watchman@npm:^2.0.0":
   version: 2.0.2
   resolution: "fb-watchman@npm:2.0.2"
@@ -10478,6 +10485,7 @@ __metadata:
     "@types/node": ^18.6.4
     app: "*"
     eslint-config-next: ^12.2.4
+    fathom-client: 3.5.0
     file-loader: ^6.2.0
     html-webpack-plugin: ^5.5.0
     next: 12.1.6
