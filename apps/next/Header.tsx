@@ -1,8 +1,8 @@
 import Head from 'next/head'
 
-const titleDefault = 'Arcade @ Legends'
+const titleDefault = 'Arcade City'
 const url = 'https://legends.arcade.city'
-const description = 'Placeholder!'
+const description = 'The game of peer-to-peer everything'
 const author = 'Author'
 
 const Header = ({ title = titleDefault }) => {
