@@ -34,7 +34,9 @@
     "android": "TAMAGUI_TARGET=native yarn expo run:android",
     "ios": "TAMAGUI_TARGET=native yarn expo run:ios",
     "web": "TAMAGUI_TARGET=web yarn expo start --web",
-    "eject": "expo eject"
+    "build:ios": "npx eas-cli build -p ios",
+    "build:ios:local": "npx eas-cli build --platform ios --local",
+    "submit:ios": "npx eas-cli submit -p ios"
   },
   "main": "index.js",
   "version": "1.0.0",
