@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
 
   useEffect(() => {
     // Initialize Fathom when the app loads
-    Fathom.load('HRLSLWOY', {
+    Fathom.load('ILZBOUGJ', {
       includedDomains: ['legends.arcade.city'],
       url: 'https://abacus.arcade.city/script.js',
     })
