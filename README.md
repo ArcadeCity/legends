@@ -14,6 +14,9 @@ Think "Pokémon Go" for real-world commerce, powered by Lightning and Nostr.
 
 It will be a cross-platform app for Android, iOS and web built in React Native.
 
+## Tech Stack
+- Tamagui, Solito, NextJS, and Expo via create-tamagui-app ([readme](https://github.com/ArcadeCity/legends/blob/tamagui/README-tamagui.md))
+
 ## Resources
 
 - [Intro to React Native](https://arcadelabs.co/articles/intro-to-react-native)
