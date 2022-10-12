@@ -1,34 +1,49 @@
 {
   "expo": {
-    "name": "myapp",
-    "slug": "myapp",
-    "scheme": "myapp",
-    "version": "1.0.0",
+    "name": "Arcade City",
+    "slug": "app6",
+    "version": "6.0.3",
+    "runtimeVersion": { "policy": "sdkVersion" },
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./assets/images/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#1c133a"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/fcdf1453-a330-40a7-98fb-0e4ae15659ca"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.tamagui.myapp"
+      "bundleIdentifier": "arcade.city.mobile",
+      "buildNumber": "10",
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Arcade City uses your location to find nearby friends and events."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#1c133a"
       },
-      "package": "com.tamagui.myapp"
+      "package": "arcade.city.mobile",
+      "versionCode": 6000200
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/images/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fcdf1453-a330-40a7-98fb-0e4ae15659ca"
+      }
     }
   }
 }
