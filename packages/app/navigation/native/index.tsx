@@ -1,31 +1,20 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-import { HomeScreen } from '../../features/home/screen'
-import { UserDetailScreen } from '../../features/user/detail-screen'
+import { MapScreen } from 'app/features/map/MapScreen'
 
 const Stack = createNativeStackNavigator<{
-  home: undefined
-  'user-detail': {
-    id: string
-  }
+  map: undefined
 }>()
 
 export function NativeNavigation() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="home"
-        component={HomeScreen}
+        name="map"
+        component={MapScreen}
         options={{
-          title: 'Home',
-        }}
-      />
-      <Stack.Screen
-        name="user-detail"
-        component={UserDetailScreen}
-        options={{
-          title: 'User',
+          title: 'Map',
         }}
       />
     </Stack.Navigator>
