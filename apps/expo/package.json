@@ -37,7 +37,8 @@
     "web": "TAMAGUI_TARGET=web yarn expo start --web",
     "build:ios": "npx eas-cli build -p ios",
     "build:ios:local": "npx eas-cli build --platform ios --local",
-    "submit:ios": "npx eas-cli submit -p ios"
+    "submit:ios": "npx eas-cli submit -p ios",
+    "publish:ios": "npx eas-cli update --branch production -p ios --message 'Update'"
   },
   "main": "index.js",
   "version": "1.0.0",
