@@ -4,6 +4,8 @@ const { withTamagui } = require('@tamagui/next-plugin')
 const withTM = require('next-transpile-modules')
 const { join } = require('path')
 
+const withPWA = require('next-pwa')
+
 process.env.IGNORE_TS_CONFIG_PATHS = 'true'
 process.env.TAMAGUI_TARGET = 'web'
 
@@ -43,6 +45,10 @@ Cheers 🍻
 `)
 
 const transform = withPlugins([
+  withPWA({
+    dest: 'public',
+    disable: process.env.NODE_ENV === 'development',
+  }),
   withTM([
     'solito',
     'react-native-web',
