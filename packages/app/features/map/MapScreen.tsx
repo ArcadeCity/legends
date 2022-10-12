@@ -1,21 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
+import { WebView } from 'react-native-webview'
 
 export function MapScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>MapScreen</Text>
-    </View>
-  )
+  return <WebView style={styles.container} source={{ uri: 'https://vmap.arcade.city' }} />
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontSize: 20,
-    fontWeight: 'bold',
   },
 })
