@@ -2,6 +2,7 @@ import '@tamagui/core/reset.css'
 import '@tamagui/font-inter/css/400.css'
 import '@tamagui/font-inter/css/700.css'
 
+import Header from '../Header'
 import * as Fathom from 'fathom-client'
 import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme'
 import { Provider } from 'app/provider'
@@ -11,7 +12,7 @@ import type { SolitoAppProps } from 'solito'
 import 'raf/polyfill'
 import { useRouter } from 'next/router'
 
-function MyApp({ Component, pageProps }: SolitoAppProps) {
+function MyApp({ Component, pageProps = { title: 'Arcade' } }: SolitoAppProps) {
   const [theme, setTheme] = useRootTheme()
   const router = useRouter()
 
@@ -40,11 +41,7 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
 
   return (
     <>
-      <Head>
-        <title>Arcade @ Legends</title>
-        <meta name="description" content="Placeholder!" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Header title={pageProps.title} />
       <NextThemeProvider onChangeTheme={setTheme}>
         <Provider disableRootThemeClass defaultTheme={theme}>
           {contents}
