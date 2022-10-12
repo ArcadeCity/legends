@@ -41,8 +41,8 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
   return (
     <>
       <Head>
-        <title>Tamagui Example App</title>
-        <meta name="description" content="Tamagui, Solito, Expo & Next.js" />
+        <title>Arcade @ Legends</title>
+        <meta name="description" content="Placeholder!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NextThemeProvider onChangeTheme={setTheme}>
