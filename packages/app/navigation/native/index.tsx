@@ -14,6 +14,7 @@ export function NativeNavigation() {
         name="map"
         component={MapScreen}
         options={{
+          headerShown: false,
           title: 'Map',
         }}
       />
