@@ -1,6 +1,7 @@
 import { Anchor, Button, H1, Paragraph, Separator, Sheet, XStack, YStack } from '@my/ui'
 import { ChevronDown, ChevronUp } from '@tamagui/feather-icons'
 import React, { useState } from 'react'
+import { View } from 'react-native'
 import { useLink } from 'solito/link'
 
 export function HomeScreen() {
@@ -44,7 +45,7 @@ export function SheetDemo() {
   const [open, setOpen] = useState(false)
   const [position, setPosition] = useState(0)
   return (
-    <>
+    <View pointerEvents="auto">
       <Button
         size="$7"
         icon={open ? ChevronDown : ChevronUp}
@@ -93,6 +94,6 @@ export function SheetDemo() {
           />
         </Sheet.Frame>
       </Sheet>
-    </>
+    </View>
   )
 }

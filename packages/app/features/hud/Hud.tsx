@@ -11,6 +11,7 @@ export const Hud = () => {
         width: '100%',
         backgroundColor: 'transparent',
       }}
+      pointerEvents="box-none"
     >
       <XStack
         flex={1}
@@ -19,8 +20,9 @@ export const Hud = () => {
         justifyContent="flex-end"
         alignItems="center"
         marginBottom={60}
+        pointerEvents="box-none"
       >
-        <YStack space="$3">
+        <YStack space="$3" pointerEvents="auto">
           <SheetDemo />
         </YStack>
       </XStack>
