@@ -7,16 +7,11 @@ export const Hud = () => (
   >
     <XStack
       flex={1}
-      flexWrap="wrap"
       backgroundColor="transparent"
-      // hoverStyle={{
-      //   backgroundColor: 'transparent',
-      // }}
-      // media query
-      $gtSm={{
-        flexDirection: 'column',
-        flexWrap: 'nowrap',
-      }}
+      flexDirection="column"
+      justifyContent="flex-end"
+      alignItems="center"
+      marginBottom={60}
     >
       <YStack space="$3">
         <Text color="white">Hello</Text>
