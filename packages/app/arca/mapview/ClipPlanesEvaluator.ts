@@ -734,13 +734,13 @@ export class TiltViewClipPlanesEvaluator extends TopViewClipPlanesEvaluator {
       : Infinity
 
     // console.log all variables in this function
-    console.log('bottomFov', bottomFov)
-    console.log('maxR', maxR)
+    // console.log('bottomFov', bottomFov)
+    // console.log('maxR', maxR)
 
-    console.log('nearPlaneTanDist', nearPlaneTanDist)
-    console.log('checkTopIntersection', checkTopIntersection)
-    console.log('bottomDist', bottomDist)
-    console.log('topDist', topDist)
+    // console.log('nearPlaneTanDist', nearPlaneTanDist)
+    // console.log('checkTopIntersection', checkTopIntersection)
+    // console.log('bottomDist', bottomDist)
+    // console.log('topDist', topDist)
 
     const near = Math.min(bottomDist ?? Infinity, topDist ?? Infinity)
     assert(near !== Infinity, 'No reference point for near distance found')
