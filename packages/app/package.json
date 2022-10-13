@@ -13,8 +13,18 @@
     "@tamagui/font-inter": "1.0.1-beta.190",
     "@tamagui/shorthands": "1.0.1-beta.191",
     "@tamagui/theme-base": "1.0.1-beta.191",
+    "@tweenjs/tween.js": "^18.6.4",
+    "csscolorparser": "^1.0.3",
+    "earcut": "^2.2.4",
     "expo-linking": "^3.2.2",
-    "solito": "^0.0.26"
+    "geojson-vt": "^3.2.1",
+    "protobufjs": "^7.1.2",
+    "rbush": "^3.0.1",
+    "solito": "^0.0.26",
+    "three": "0.129.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.129.2"
   },
   "sideEffects": false
 }

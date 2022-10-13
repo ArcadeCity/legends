@@ -1,0 +1,86 @@
+{
+    "extends": "arcade_reduced.json",
+    "bloom": {
+        "strength": 1,
+        "threshold": 0.5,
+        "radius": 0.9,
+        "enabled": true
+    },
+    "outline": {
+        "enabled": true,
+        "ghostExtrudedPolygons": true,
+        "thickness": 0.3,
+        "color": "#FFF4BF"
+    },
+    "definitions": {
+        "northPoleColor": {
+            "type": "color",
+            "value": "#130d28"
+        },
+        "southPoleColor": {
+            "type": "color",
+            "value": "#1c133a"
+        }
+    },
+    "sky": {
+        "type": "cubemap",
+        "positiveX": "space-posx.jpg",
+        "negativeX": "space-negx.jpg",
+        "positiveY": "space-posy.jpg",
+        "negativeY": "space-negy.jpg",
+        "positiveZ": "space-posz.jpg",
+        "negativeZ": "space-negz.jpg"
+    },
+    "fog": {
+        "color": "#5B20F2",
+        "startRatio": 0.9
+    },
+    "lights": [
+        {
+            "type": "ambient",
+            "color": "#5B20F2",
+            "name": "ambientLight",
+            "intensity": 0.9
+        },
+        {
+            "type": "directional",
+            "color": "#AE30FF",
+            "name": "light1",
+            "intensity": 0.8,
+            "direction": {
+                "x": 1,
+                "y": 5,
+                "z": 0.5
+            }
+        },
+        {
+            "type": "directional",
+            "color": "#F459F4",
+            "name": "light2",
+            "intensity": 0.8,
+            "direction": {
+                "x": -1,
+                "y": -3,
+                "z": 1
+            }
+        }
+    ],
+    "styles": {
+        "polar": [
+            {
+                "description": "North pole",
+                "when": ["==", ["get", "kind"], "north_pole"],
+                "technique": "fill",
+                "renderOrder": 5,
+                "color": ["ref", "northPoleColor"]
+            },
+            {
+                "description": "South pole",
+                "when": ["==", ["get", "kind"], "south_pole"],
+                "technique": "fill",
+                "renderOrder": 5,
+                "color": ["ref", "southPoleColor"]
+            }
+        ]
+    }
+}
