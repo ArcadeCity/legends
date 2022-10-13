@@ -28,13 +28,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@arcadecity/arca@npm:^0.0.0-development":
-  version: 0.0.0-development
-  resolution: "@arcadecity/arca@npm:0.0.0-development"
-  checksum: 5593655770a70c3c7d3786ab10d77c254d99c4a4635f7d1c5f4d6ee5dea91235dd6bc7a59abbe952a69c805833a77f2cebde7eb3480186a8fc39bfc95fe00f5d
-  languageName: node
-  linkType: hard
-
 "@babel/code-frame@npm:7.10.4, @babel/code-frame@npm:~7.10.4":
   version: 7.10.4
   resolution: "@babel/code-frame@npm:7.10.4"
@@ -4379,7 +4372,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "app@workspace:packages/app"
   dependencies:
-    "@arcadecity/arca": ^0.0.0-development
     "@my/config": "*"
     "@my/ui": "*"
     "@react-navigation/native": ^6.0.11

@@ -1,9 +1,15 @@
-import { helloWorld } from '@arcadecity/arca'
+import { useEffect } from 'react'
 
 export const ArcaMapScreen = () => {
+  useEffect(() => {
+    console.log(helloWorld())
+    // console.log(MapView)
+    const mapview = new MapView()
+    console.log(mapview)
+    // console.log(helloWorld())
+  }, [])
+
   return (
-    <div>
-      <h1>{helloWorld()}</h1>
-    </div>
+    <canvas id="realgame" style={{ height: '100vh', width: '100vw', backgroundColor: 'green' }} />
   )
 }

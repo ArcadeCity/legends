@@ -3,7 +3,6 @@
   "name": "app",
   "main": "index.ts",
   "dependencies": {
-    "@arcadecity/arca": "^0.0.0-development",
     "@my/config": "*",
     "@my/ui": "*",
     "@react-navigation/native": "^6.0.11",
