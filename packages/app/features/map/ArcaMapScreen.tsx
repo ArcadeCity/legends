@@ -2,10 +2,10 @@ import { useEffect } from 'react'
 
 export const ArcaMapScreen = () => {
   useEffect(() => {
-    console.log(helloWorld())
+    // console.log(helloWorld())
     // console.log(MapView)
-    const mapview = new MapView()
-    console.log(mapview)
+    // const mapview = new MapView()
+    // console.log(mapview)
     // console.log(helloWorld())
   }, [])
 
