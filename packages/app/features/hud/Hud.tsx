@@ -1,23 +1,29 @@
-import { View } from 'react-native'
-import { Text, XStack, YStack } from 'tamagui'
+import { Alert, View } from 'react-native'
+import { Button, Text, XStack, YStack } from 'tamagui'
+import { SheetDemo } from '../home/screen'
 
-export const Hud = () => (
-  <View
-    style={{ position: 'absolute', height: '100%', width: '100%', backgroundColor: 'transparent' }}
-  >
-    <XStack
-      flex={1}
-      backgroundColor="transparent"
-      flexDirection="column"
-      justifyContent="flex-end"
-      alignItems="center"
-      marginBottom={60}
+export const Hud = () => {
+  return (
+    <View
+      style={{
+        position: 'absolute',
+        height: '100%',
+        width: '100%',
+        backgroundColor: 'transparent',
+      }}
     >
-      <YStack space="$3">
-        <Text color="white">Hello</Text>
-
-        <Text color="white">World</Text>
-      </YStack>
-    </XStack>
-  </View>
-)
+      <XStack
+        flex={1}
+        backgroundColor="transparent"
+        flexDirection="column"
+        justifyContent="flex-end"
+        alignItems="center"
+        marginBottom={60}
+      >
+        <YStack space="$3">
+          <SheetDemo />
+        </YStack>
+      </XStack>
+    </View>
+  )
+}

@@ -40,7 +40,7 @@ export function HomeScreen() {
   )
 }
 
-function SheetDemo() {
+export function SheetDemo() {
   const [open, setOpen] = useState(false)
   const [position, setPosition] = useState(0)
   return (
