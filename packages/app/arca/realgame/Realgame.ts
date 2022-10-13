@@ -41,11 +41,11 @@ export default class Realgame {
     this.initializeMap()
     // this.initializeEcs()
 
-    // this.initAustinScene()
+    this.initAustinScene()
     // this.createTestBeacons()
-    setTimeout(() => {
-      this.initGlobeZoom()
-    }, 1000)
+    // setTimeout(() => {
+    //   this.initGlobeZoom()
+    // }, 1000)
   }
 
   public initGlobeZoom() {
