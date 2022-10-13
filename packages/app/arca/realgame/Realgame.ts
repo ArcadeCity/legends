@@ -2,7 +2,11 @@ import { ECSYThreeEntity, ECSYThreeWorld, initializeFromMap } from 'app/arca/ecs
 import { EarthConstants, GeoCoordinates, sphereProjection } from 'app/arca/geoutils'
 import { MapControls } from 'app/arca/map-controls'
 import {
-  AtmosphereLightMode, MapAnchor, MapView, MapViewAtmosphere, MapViewEventNames
+  AtmosphereLightMode,
+  MapAnchor,
+  MapView,
+  MapViewAtmosphere,
+  MapViewEventNames,
 } from 'app/arca/mapview'
 import { OmvTileDecoder } from 'app/arca/omv-datasource/index-worker'
 import { UI } from 'app/arca/ui'
@@ -40,7 +44,6 @@ export default class Realgame {
     // this.initAustinScene()
     // this.createTestBeacons()
     setTimeout(() => {
-      console.log('woah zooming?')
       this.initGlobeZoom()
     }, 1000)
   }
@@ -230,8 +233,6 @@ export default class Realgame {
     mapControls.enabled = false
     // mapControls.maxTiltAngle = 60
     // mapControls.maxZoomLevel = 14
-
-    console.log('did we get here?')
 
     // this.mapView.loadPostEffects('resources/effects_test.json')
   }

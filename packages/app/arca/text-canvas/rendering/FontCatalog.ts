@@ -88,8 +88,8 @@ export class FontCatalog {
    * @returns `FontCatalog` Promise.
    */
   static async load(path: string, maxCodePointCount: number): Promise<FontCatalog> {
-    console.log('fontcatalog nah')
-    return
+    // console.log('fontcatalog nah')
+    // return
     const url = new URL(path, window.location.href)
     const fontCatalog = await FontCatalog.loadJSON(url.href)
 

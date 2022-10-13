@@ -16,17 +16,17 @@ export async function loadFontCatalog(
   onSuccess: FontCatalogCallback,
   onError?: (error: Error) => void
 ): Promise<void> {
-  console.log('skipping font catalog loading')
+  // console.log('skipping font catalog loading')
 
   // return a promise that immediately resolves
-  return new Promise((resolve) => resolve())
+  // return new Promise((resolve) => resolve())
 
-  // return await FontCatalog.load(fontCatalogConfig.url, 1024)
-  //   .then<void>(onSuccess.bind(undefined, fontCatalogConfig.name))
-  //   .catch((error: Error) => {
-  //     logger.error('Failed to load FontCatalog: ', fontCatalogConfig.name, error)
-  //     if (onError) {
-  //       onError(error)
-  //     }
-  //   })
+  return await FontCatalog.load(fontCatalogConfig.url, 1024)
+    .then<void>(onSuccess.bind(undefined, fontCatalogConfig.name))
+    .catch((error: Error) => {
+      logger.error('Failed to load FontCatalog: ', fontCatalogConfig.name, error)
+      if (onError) {
+        onError(error)
+      }
+    })
 }

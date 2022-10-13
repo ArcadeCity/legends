@@ -5,7 +5,12 @@
  */
 
 import 'app/arca/fetch'
-import { DecodedTile, ITileDecoder, RequestController, TileInfo } from 'app/arca/datasource-protocol'
+import {
+  DecodedTile,
+  ITileDecoder,
+  RequestController,
+  TileInfo,
+} from 'app/arca/datasource-protocol'
 import { TileKey } from 'app/arca/geoutils'
 import { BaseTileLoader, DataSource, TileLoaderState } from 'app/arca/mapview'
 import { LoggerManager } from 'app/arca/utils'
@@ -117,11 +122,11 @@ export class TileLoader extends BaseTileLoader {
             err.name = 'AbortError'
             throw err
           }
-          console.log(
-            `[provider] Fetched payload of length ${payload.byteLength} - zoomlevel: ${
-              this.tileKey.level
-            } - mortonCode: ${this.tileKey.mortonCode()}`
-          )
+          // console.log(
+          //   `[provider] Fetched payload of length ${payload.byteLength} - zoomlevel: ${
+          //     this.tileKey.level
+          //   } - mortonCode: ${this.tileKey.mortonCode()}`
+          // )
           this.onLoaded(payload, onDone, onError)
         })
         .catch((error) => {

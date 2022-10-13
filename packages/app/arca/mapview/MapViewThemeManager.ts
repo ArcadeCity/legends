@@ -96,27 +96,27 @@ export class MapViewThemeManager {
     environment.updateClearColor(theme.clearColor, theme.clearAlpha)
 
     // Images.
-    console.log('[updateTheme] skipping updateImages')
-    // this.m_theme.images = theme.images
-    // this.m_theme.imageTextures = theme.imageTextures
-    // await this.updateImages(theme.images, theme.imageTextures)
+    // console.log('[updateTheme] skipping updateImages')
+    this.m_theme.images = theme.images
+    this.m_theme.imageTextures = theme.imageTextures
+    await this.updateImages(theme.images, theme.imageTextures)
 
     // POI tables.
     this.m_theme.poiTables = theme.poiTables
     await this.loadPoiTables(theme.poiTables)
     // Text.
 
-    console.log('[updateTheme] skipping updateText')
+    // console.log('[updateTheme] skipping updateText')
 
-    // this.m_theme.textStyles = theme.textStyles
-    // this.m_theme.defaultTextStyle = theme.defaultTextStyle
-    // this.m_theme.fontCatalogs = theme.fontCatalogs
+    this.m_theme.textStyles = theme.textStyles
+    this.m_theme.defaultTextStyle = theme.defaultTextStyle
+    this.m_theme.fontCatalogs = theme.fontCatalogs
 
-    // await this.m_mapView.resetTextRenderer(
-    //   theme.fontCatalogs,
-    //   theme.textStyles,
-    //   theme.defaultTextStyle
-    // )
+    await this.m_mapView.resetTextRenderer(
+      theme.fontCatalogs,
+      theme.textStyles,
+      theme.defaultTextStyle
+    )
 
     if (Array.isArray(theme.priorities)) {
       this.m_theme.priorities = theme.priorities
