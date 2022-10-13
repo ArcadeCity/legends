@@ -1,4 +1,5 @@
 import Realgame from 'app/arca/realgame/Realgame'
+import { Hud } from 'app/features/hud/Hud'
 import { useEffect } from 'react'
 
 const Page = () => {
@@ -8,6 +9,7 @@ const Page = () => {
   }, [])
   return (
     <>
+      <Hud />
       <canvas id="realgame" className="h-screen w-screen"></canvas>
       <div id="overlay">
         <div className="center">
