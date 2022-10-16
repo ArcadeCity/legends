@@ -4308,10 +4308,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/three@npm:0.129.2":
-  version: 0.129.2
-  resolution: "@types/three@npm:0.129.2"
-  checksum: 1971cf99fe4f26a928f3244983a1889ebcf3c1fe573f30515caedddb3d4f9e6de338f2d6cf1f280694fa5036c8d365ea8cc05d10d428934be205f20601e2e826
+"@types/three@npm:0.139.0":
+  version: 0.139.0
+  resolution: "@types/three@npm:0.139.0"
+  checksum: 811ce2dd6cfeaa8b051699b6e57f5696b30cb4d33697675c9eee500e377cdbdc872dc6932dfc094c3ae61acfb895d089043a6e5c389d563c516d99ebfef8c130
   languageName: node
   linkType: hard
 
@@ -4739,7 +4739,7 @@ __metadata:
     "@tamagui/shorthands": 1.0.1-beta.191
     "@tamagui/theme-base": 1.0.1-beta.191
     "@tweenjs/tween.js": ^18.6.4
-    "@types/three": 0.129.2
+    "@types/three": 0.139.0
     base64-arraybuffer: 1.0.2
     csscolorparser: ^1.0.3
     earcut: ^2.2.4
@@ -4752,7 +4752,7 @@ __metadata:
     rbush: ^3.0.1
     sockjs-client: 1.6.1
     solito: ^0.0.26
-    three: ^0.145.0
+    three: 0.139.2
     zustand: 4.1.2
   languageName: unknown
   linkType: soft
@@ -15261,10 +15261,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:^0.145.0":
-  version: 0.145.0
-  resolution: "three@npm:0.145.0"
-  checksum: 1469a5994666a8e76ee7fffda93bde9a5d1c0dfcc831377b1a6ce3579f2933b57e8a8004a3ff7b36529b68484b9fa58eec8f136e1ac9ec02413cdfc360300ec4
+"three@npm:0.139.2":
+  version: 0.139.2
+  resolution: "three@npm:0.139.2"
+  checksum: 9e016065b31a2a69bba730a32bd5b61354365bf0f5072121b8695aac38c9585e4e46361275967fbb58d21e001e5189128107c3ecbf24338ca951d11b524df992
   languageName: node
   linkType: hard
 

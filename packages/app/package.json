@@ -28,11 +28,11 @@
     "rbush": "^3.0.1",
     "sockjs-client": "1.6.1",
     "solito": "^0.0.26",
-    "three": "^0.145.0",
+    "three": "0.139.2",
     "zustand": "4.1.2"
   },
   "devDependencies": {
-    "@types/three": "0.129.2"
+    "@types/three": "0.139.0"
   },
   "sideEffects": false
 }
