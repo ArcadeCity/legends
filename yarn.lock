@@ -4753,6 +4753,7 @@ __metadata:
     sockjs-client: 1.6.1
     solito: ^0.0.26
     three: ^0.145.0
+    zustand: 4.1.2
   languageName: unknown
   linkType: soft
 
@@ -15922,7 +15923,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:^1.0.0":
+"use-sync-external-store@npm:1.2.0, use-sync-external-store@npm:^1.0.0":
   version: 1.2.0
   resolution: "use-sync-external-store@npm:1.2.0"
   peerDependencies:
@@ -16617,6 +16618,23 @@ __metadata:
   version: 0.0.2
   resolution: "zstddec@npm:0.0.2"
   checksum: 107334442a34590173cda03614006337712658fd043fa79f72bd486de527e2a16da474d7b20d4a171f086b334c2ad8a72afb634776d79bc2c36aee065babe31b
+  languageName: node
+  linkType: hard
+
+"zustand@npm:4.1.2":
+  version: 4.1.2
+  resolution: "zustand@npm:4.1.2"
+  dependencies:
+    use-sync-external-store: 1.2.0
+  peerDependencies:
+    immer: ">=9.0"
+    react: ">=16.8"
+  peerDependenciesMeta:
+    immer:
+      optional: true
+    react:
+      optional: true
+  checksum: e7fefc5deb232082edd2abef072b92554d5effc261594d633ee55d7d4fe0e54c5b16ee8c5e628fab2e1090946d9e493865b72ad76280a413e8ff5bea6d0ca642
   languageName: node
   linkType: hard
 
