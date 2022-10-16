@@ -4,6 +4,7 @@ import { NativeNavigation } from 'app/navigation/native'
 import { Provider } from 'app/provider'
 import { useFonts } from 'expo-font'
 import { useExpoUpdates } from './lib/useExpoUpdates'
+import { StatusBar } from 'expo-status-bar'
 
 export default function App() {
   const [loaded] = useFonts({
@@ -20,6 +21,7 @@ export default function App() {
   return (
     <Provider>
       <NativeNavigation />
+      <StatusBar style="light" />
     </Provider>
   )
 }
