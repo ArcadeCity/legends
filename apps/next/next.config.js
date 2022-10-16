@@ -90,6 +90,7 @@ module.exports = function (name, { defaultConfig }) {
   defaultConfig.webpack5 = true
   // defaultConfig.experimental.reactRoot = 'concurrent'
   defaultConfig.typescript.ignoreBuildErrors = true
+  defaultConfig.eslint.ignoreDuringBuilds = true
   return transform(name, {
     ...defaultConfig,
     webpack5: true,
