@@ -2959,7 +2959,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/drei@npm:9.35.1":
+"@react-three/drei@npm:^9.29.1":
   version: 9.35.1
   resolution: "@react-three/drei@npm:9.35.1"
   dependencies:
@@ -2993,7 +2993,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/fiber@npm:8.8.10":
+"@react-three/fiber@npm:^8.7.2":
   version: 8.8.10
   resolution: "@react-three/fiber@npm:8.8.10"
   dependencies:
@@ -3025,6 +3025,22 @@ __metadata:
     react-native:
       optional: true
   checksum: 35a2816563cb430632d81c74b7cb388c7e1f7332d11849767197c57b107e49be6190b3d1fb93c4227e4e6840792b9e263933d6478980a323b8355508139c7bf1
+  languageName: node
+  linkType: hard
+
+"@react-three/postprocessing@npm:2.6.2":
+  version: 2.6.2
+  resolution: "@react-three/postprocessing@npm:2.6.2"
+  dependencies:
+    postprocessing: ^6.28.5
+    react-merge-refs: ^1.1.0
+    screen-space-reflections: 2.5.0
+    three-stdlib: ^2.8.11
+  peerDependencies:
+    "@react-three/fiber": ">=7.0"
+    react: ">=17.0"
+    three: ">=0.136.0"
+  checksum: 5916759abb01274416ef06d325f6a1e21660710611a8edbce4c0564836a8762d7397e7b44a5ae876a87c92642fadd5900a338981fba9445af4ef02ff4912eaac
   languageName: node
   linkType: hard
 
@@ -4308,7 +4324,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/three@npm:0.139.0":
+"@types/three@npm:^0.139.0":
   version: 0.139.0
   resolution: "@types/three@npm:0.139.0"
   checksum: 811ce2dd6cfeaa8b051699b6e57f5696b30cb4d33697675c9eee500e377cdbdc872dc6932dfc094c3ae61acfb895d089043a6e5c389d563c516d99ebfef8c130
@@ -4730,8 +4746,9 @@ __metadata:
     "@my/ui": "*"
     "@react-navigation/native": ^6.0.11
     "@react-navigation/native-stack": ^6.7.0
-    "@react-three/drei": 9.35.1
-    "@react-three/fiber": 8.8.10
+    "@react-three/drei": ^9.29.1
+    "@react-three/fiber": ^8.7.2
+    "@react-three/postprocessing": 2.6.2
     "@tamagui/animations-react-native": 1.0.1-beta.191
     "@tamagui/colors": 1.0.1-beta.191
     "@tamagui/feather-icons": 1.0.1-beta.191
@@ -4739,8 +4756,9 @@ __metadata:
     "@tamagui/shorthands": 1.0.1-beta.191
     "@tamagui/theme-base": 1.0.1-beta.191
     "@tweenjs/tween.js": ^18.6.4
-    "@types/three": 0.139.0
+    "@types/three": ^0.139.0
     base64-arraybuffer: 1.0.2
+    cannon: 0.6.2
     csscolorparser: ^1.0.3
     earcut: ^2.2.4
     expo-gl: ^11.4.0
@@ -5619,6 +5637,13 @@ __metadata:
   version: 1.0.30001418
   resolution: "caniuse-lite@npm:1.0.30001418"
   checksum: 03380a9ba50b1abd0081e76bfdf331bfb2c28f2277ce5eead5b83960c4db9f1fbbd84a536efa6f8f1fe2c038bc01129d6c42d17f8323fe99a016a5da3829c4bc
+  languageName: node
+  linkType: hard
+
+"cannon@npm:0.6.2":
+  version: 0.6.2
+  resolution: "cannon@npm:0.6.2"
+  checksum: 67f318ab1585b1609b67155ef9d25efccaefcd02f84feabb4d7e9334303eb8c100a2bd7f4ac0f558545a42186e6e567f849cdef6ed302d9bf7a2ddaa292aa938
   languageName: node
   linkType: hard
 
@@ -12852,6 +12877,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postprocessing@npm:^6.28.5":
+  version: 6.28.7
+  resolution: "postprocessing@npm:6.28.7"
+  peerDependencies:
+    three: ">= 0.125.0 < 0.145.0"
+  checksum: 6f26c01e63520bd316d15e46bce055feb70ac54a08a8a4ef5a875bd3710e5c3ab68351226f35a1999c56e966d802e04b197ad0a3f3d0cb4435792d3a04fcd24f
+  languageName: node
+  linkType: hard
+
 "potpack@npm:^1.0.1":
   version: 1.0.2
   resolution: "potpack@npm:1.0.2"
@@ -14114,6 +14148,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"screen-space-reflections@npm:2.5.0":
+  version: 2.5.0
+  resolution: "screen-space-reflections@npm:2.5.0"
+  peerDependencies:
+    postprocessing: ">=6.28.0"
+    three: ">=0.141.0"
+  checksum: bbe5f157fd7e4fd6c34d88d43032ae472b51c00bf6b3de9114bd85c1fe2974ac3fd59f00d0a0fc8f8b10f10b338fa5613ced195a62d3d949293a1d98eeee5738
+  languageName: node
+  linkType: hard
+
 "sembear@npm:^0.5.0":
   version: 0.5.2
   resolution: "sembear@npm:0.5.2"
@@ -15240,7 +15284,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three-stdlib@npm:^2.17.3":
+"three-stdlib@npm:^2.17.3, three-stdlib@npm:^2.8.11":
   version: 2.17.3
   resolution: "three-stdlib@npm:2.17.3"
   dependencies:

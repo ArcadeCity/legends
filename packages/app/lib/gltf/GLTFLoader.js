@@ -2480,6 +2480,7 @@ class GLTFParser {
         return texture
       })
       .catch(function () {
+        console.log('what fuck?')
         console.error("THREE.GLTFLoader: Couldn't load texture", sourceURI)
         return null
       })
