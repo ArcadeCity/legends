@@ -7,11 +7,11 @@ export const Hud = () => {
   const bears = boundStore((state) => state.bears)
   return (
     <View style={styles.container}>
-      <View style={styles.hud}>
+      {/* <View style={styles.hud}>
         <View style={styles.hudItem}>
           <Text style={styles.hudText}>{bears} sats</Text>
         </View>
-      </View>
+      </View> */}
       <Pressable
         onPressIn={() => store.setState({ forward: true })}
         onPressOut={() => store.setState({ forward: false })}
