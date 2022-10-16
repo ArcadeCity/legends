@@ -4491,6 +4491,7 @@ __metadata:
     geojson-vt: ^3.2.1
     protobufjs: ^7.1.2
     rbush: ^3.0.1
+    sockjs-client: 1.6.1
     solito: ^0.0.26
     three: 0.129.0
   languageName: unknown
