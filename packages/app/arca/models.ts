@@ -1,15 +1,15 @@
 export const models = {
-  druid: require('../../assets/models/druid.glb'),
+  druid: require('../../../apps/expo/assets/models/druid.glb'),
   grass: {
-    platform: require('../../assets/models/grass-platform.glb'),
-    tile: require('../../assets/models/grass-tile.glb'),
+    platform: require('../../../apps/expo/assets/models/grass-platform.glb'),
+    tile: require('../../../apps/expo/assets/models/grass-tile.glb'),
   },
-  man: require('../../assets/models/Male_Casual.glb'),
+  man: require('../../../apps/expo/assets/models/Male_Casual.glb'),
   paladin: {
-    model: require('../../assets/models/paladin.glb'),
-    texture: require('../../assets/models/paladin.png'),
+    model: require('../../../apps/expo/assets/models/paladin.glb'),
+    texture: require('../../../apps/expo/assets/models/paladin.png'),
   },
-  slime: require('../../assets/models/Slime.glb'),
+  slime: require('../../../apps/expo/assets/models/Slime.glb'),
 }
 
 export type ModelName = keyof typeof models
