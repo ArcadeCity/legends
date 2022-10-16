@@ -1,4 +1,5 @@
 import { Canvas } from '@react-three/fiber'
+import { CameraRig } from './CameraRig'
 import { Skybox } from './Skybox'
 import { SpawnPoint } from './SpawnPoint'
 
@@ -35,7 +36,7 @@ export const GridScene = () => {
       </mesh>
       <ambientLight intensity={0.5} />
       <hemisphereLight intensity={0.25} />
-      {/* <CameraRig /> */}
+      <CameraRig />
       {/* <Effects /> */}
     </Canvas>
   )
