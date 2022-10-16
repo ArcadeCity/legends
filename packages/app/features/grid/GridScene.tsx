@@ -1,8 +1,10 @@
+import { World } from 'app/arca/world/World'
 import { Canvas } from '@react-three/fiber'
 import { CameraRig } from './CameraRig'
 import Effects from './Effects'
 import { Skybox } from './Skybox'
 import { SpawnPoint } from './SpawnPoint'
+import useStore, { setState } from './store'
 
 export const GridScene = () => {
   return (
@@ -10,6 +12,10 @@ export const GridScene = () => {
       style={{
         position: 'absolute',
         top: 0,
+      }}
+      onCreated={(state) => {
+        const world = new World(state.camera, state.gl, state.scene)
+        setState({ world })
       }}
     >
       <Skybox />

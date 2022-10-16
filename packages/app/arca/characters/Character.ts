@@ -313,6 +313,10 @@ export class Character extends THREE.Object3D implements IWorldEntity {
   }
 
   public physicsPostStep(body: CANNON.Body, character: Character): void {
+    if (!body) {
+      console.log('no body...')
+      return
+    }
     // Get velocities
     let simulatedVelocity = new THREE.Vector3(body.velocity.x, body.velocity.y, body.velocity.z)
 
