@@ -43,11 +43,7 @@ export class World {
 
   private lastScenarioID: string
 
-  constructor(
-    camera: THREE.Camera,
-    renderer: THREE.WebGLRenderer,
-    scene: THREE.Scene
-  ) {
+  constructor(camera: THREE.Camera, renderer: THREE.WebGLRenderer, scene: THREE.Scene) {
     this.camera = camera as THREE.PerspectiveCamera
     this.renderer = renderer
     this.graphicsWorld = scene
@@ -78,11 +74,7 @@ export class World {
     }
 
     this.inputManager = new InputManager(this, this.renderer.domElement)
-    this.cameraOperator = new CameraOperator(
-      this,
-      this.camera,
-      this.params.Mouse_Sensitivity
-    )
+    this.cameraOperator = new CameraOperator(this, this.camera, this.params.Mouse_Sensitivity)
 
     const planeGeometry = new THREE.PlaneGeometry(25, 25)
 
@@ -99,10 +91,7 @@ export class World {
     const planeShape = new CANNON.Plane()
     const planeBody = new CANNON.Body({ mass: 0 })
     planeBody.addShape(planeShape)
-    planeBody.quaternion.setFromAxisAngle(
-      new CANNON.Vec3(1, 0, 0),
-      -Math.PI / 2
-    )
+    planeBody.quaternion.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), -Math.PI / 2)
     this.physicsWorld.addBody(planeBody)
   }
 
@@ -123,10 +112,7 @@ export class World {
     // }
   }
 
-  public launchScenario(
-    scenarioID: string,
-    loadingManager?: LoadingManager
-  ): void {
+  public launchScenario(scenarioID: string, loadingManager?: LoadingManager): void {
     this.lastScenarioID = scenarioID
 
     this.clearEntities()
@@ -180,11 +166,7 @@ export class World {
     })
 
     // Lerp time scale
-    this.params.Time_Scale = THREE.MathUtils.lerp(
-      this.params.Time_Scale,
-      this.timeScaleTarget,
-      0.2
-    )
+    this.params.Time_Scale = THREE.MathUtils.lerp(this.params.Time_Scale, this.timeScaleTarget, 0.2)
 
     // Physics debug
     if (this.params.Debug_Physics) this.cannonDebugRenderer.update()

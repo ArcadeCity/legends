@@ -1,4 +1,4 @@
-import * as CANNON from 'app/arca/cannon/cannon'
+import * as CANNON from 'cannon'
 import * as THREE from 'three'
 import * as Utils from '../../core/FunctionLibrary'
 import { ICollider } from '../../interfaces/ICollider'
@@ -40,6 +40,6 @@ export class CapsuleCollider implements ICollider {
     capsuleBody.addShape(sphereShape, new CANNON.Vec3(0, -options.height / 2, 0))
 
     this.body = capsuleBody
-    console.log('hi did we make capsule collider', capsuleBody)
+    console.log('hi did we make capsule')
   }
 }
