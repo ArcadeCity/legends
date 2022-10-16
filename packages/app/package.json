@@ -17,6 +17,7 @@
     "@tamagui/theme-base": "1.0.1-beta.191",
     "@tweenjs/tween.js": "^18.6.4",
     "base64-arraybuffer": "1.0.2",
+    "cannon": "0.6.2",
     "csscolorparser": "^1.0.3",
     "earcut": "^2.2.4",
     "expo-gl": "^11.4.0",
@@ -28,11 +29,11 @@
     "rbush": "^3.0.1",
     "sockjs-client": "1.6.1",
     "solito": "^0.0.26",
-    "three": "0.139.2",
+    "three": "0.129.0",
     "zustand": "4.1.2"
   },
   "devDependencies": {
-    "@types/three": "0.139.0"
+    "@types/three": "0.129.0"
   },
   "sideEffects": false
 }

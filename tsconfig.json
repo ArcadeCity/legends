@@ -2,11 +2,14 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
+    "allowJs": true,
+    "baseUrl": ".",
     "paths": {
       "app/*": ["./packages/app/*"],
       "arca": ["./packages/app/arca"],
       "arca/*": ["./packages/app/arca/*"],
-      "lib/*": ["./packages/app/lib/*"]
+      "lib/*": ["./packages/app/lib/*"],
+      "cannon": ["./packages/app/arca/cannon/cannon"]
     }
   },
   "extends": "expo/tsconfig.base"
