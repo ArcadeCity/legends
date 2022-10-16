@@ -33,6 +33,7 @@ export const GridScene = () => {
         <planeGeometry />
         <meshPhongMaterial color="black" receiveShadow />
       </mesh>
+      <ambientLight intensity={0.5} />
       <hemisphereLight intensity={0.25} />
       {/* <CameraRig /> */}
       {/* <Effects /> */}

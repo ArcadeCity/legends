@@ -26,7 +26,9 @@ export const SpawnPoint = () => {
     }
   }, [ref])
 
-  const gltf = useGLTF('/build/assets/boxman.glb')
+  const gltf = useGLTF('/build/assets/Male_Casual.glb')
+  // const gltf = useGLTF('/build/assets/boxman.glb')
+  console.log('gltf?', gltf)
   useEffect(() => {
     if (!world || !scene || !ref || !ref.current) return
     const character = new Character(gltf)

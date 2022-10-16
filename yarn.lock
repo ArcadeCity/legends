@@ -2959,7 +2959,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/drei@npm:9.35.1":
+"@react-three/drei@npm:^9.29.1":
   version: 9.35.1
   resolution: "@react-three/drei@npm:9.35.1"
   dependencies:
@@ -2993,7 +2993,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/fiber@npm:8.8.10":
+"@react-three/fiber@npm:^8.7.2":
   version: 8.8.10
   resolution: "@react-three/fiber@npm:8.8.10"
   dependencies:
@@ -4730,8 +4730,8 @@ __metadata:
     "@my/ui": "*"
     "@react-navigation/native": ^6.0.11
     "@react-navigation/native-stack": ^6.7.0
-    "@react-three/drei": 9.35.1
-    "@react-three/fiber": 8.8.10
+    "@react-three/drei": ^9.29.1
+    "@react-three/fiber": ^8.7.2
     "@tamagui/animations-react-native": 1.0.1-beta.191
     "@tamagui/colors": 1.0.1-beta.191
     "@tamagui/feather-icons": 1.0.1-beta.191
