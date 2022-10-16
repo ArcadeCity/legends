@@ -9,6 +9,7 @@
     "@react-navigation/native-stack": "^6.7.0",
     "@react-three/drei": "^9.29.1",
     "@react-three/fiber": "^8.7.2",
+    "@react-three/postprocessing": "2.6.2",
     "@tamagui/animations-react-native": "1.0.1-beta.191",
     "@tamagui/colors": "1.0.1-beta.191",
     "@tamagui/feather-icons": "1.0.1-beta.191",
