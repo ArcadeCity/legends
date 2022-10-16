@@ -3,7 +3,7 @@ import SockJS from 'sockjs-client'
 
 export default function SockTest() {
   useEffect(() => {
-    var sock = new SockJS('http://realgame-dev.us-east-1.elasticbeanstalk.com/echo')
+    var sock = new SockJS('https://realgame-dev.arcade.city/echo')
     sock.onopen = function () {
       console.log('open')
       sock.send('test')
