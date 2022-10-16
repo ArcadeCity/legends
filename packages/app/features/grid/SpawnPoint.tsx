@@ -29,7 +29,6 @@ export const SpawnPoint = () => {
   const gltf = useGLTF('/build/assets/Male_Casual.glb')
   // const gltf = useGLTF('/build/assets/boxman.glb')
   useEffect(() => {
-    console.log('world:', world)
     if (!world || !scene || !ref || !ref.current) return
     const character = new Character(gltf)
     let worldPos = new THREE.Vector3()
