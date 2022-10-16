@@ -63,11 +63,13 @@ export class EntityManager {
 
       e.Update(timeElapsed)
 
-      if (e.dead_) {
-        dead.push(e)
-      } else {
-        alive.push(e)
-      }
+      alive.push(e)
+
+      // if (e.dead_) {
+      //   dead.push(e)
+      // } else {
+      //   alive.push(e)
+      // }
     }
 
     // for (let i = 0; i < dead.length; ++i) {
