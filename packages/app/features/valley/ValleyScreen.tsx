@@ -2,7 +2,7 @@ import { store } from 'app/arca/store'
 import { Realgame } from 'app/arca/valley/Realgame'
 import { PerspectiveCamera } from 'three'
 // import { Hud } from 'views/hud/Hud'
-import { Canvas } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber/native'
 
 export const ValleyScreen = () => {
   return (

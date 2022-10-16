@@ -11,9 +11,9 @@ import { NPCFSM } from './NPCFSM'
 export class Wizard extends NPC {
   constructor() {
     super()
-    setTimeout(() => {
-      this.LoadModel()
-    }, 145)
+    // setTimeout(() => {
+    //   this.LoadModel()
+    // }, 145)
   }
 
   async LoadModel() {

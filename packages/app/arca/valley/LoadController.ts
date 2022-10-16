@@ -16,6 +16,7 @@ export class LoadController extends Component {
   }
 
   async LoadGLB(asset: string | number) {
+    console.log('Trying to load GLB:', asset)
     const model = Asset.fromModule(asset)
     await model.downloadAsync()
     const uri = model.localUri
