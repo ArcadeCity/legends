@@ -14,35 +14,35 @@ if (disableExtraction) {
   console.log('Disabling static extraction in development mode for better HMR')
 }
 
-console.log(`
+// console.log(`
 
-Hello and welcome to Tamagui! You can remove this console.log from your next.config.js.
+// Hello and welcome to Tamagui! You can remove this console.log from your next.config.js.
 
-We've set up a few things for you. Note that "excludeReactNativeWebExports" removes
-the following from react-native-web for bundle size savings:
+// We've set up a few things for you. Note that "excludeReactNativeWebExports" removes
+// the following from react-native-web for bundle size savings:
 
-- Switch
-- ProgressBar
-- Picker
-- Modal
-- VirtualizedList
-- VirtualizedSectionList
-- AnimatedFlatList
-- FlatList
-- CheckBox
-- Touchable
-- SectionList
+// - Switch
+// - ProgressBar
+// - Picker
+// - Modal
+// - VirtualizedList
+// - VirtualizedSectionList
+// - AnimatedFlatList
+// - FlatList
+// - CheckBox
+// - Touchable
+// - SectionList
 
-If you use any of these components you'll get an error "Cannot convert object to
-primitive value".
+// If you use any of these components you'll get an error "Cannot convert object to
+// primitive value".
 
-If you want a simpler setup, you can try the experimental "useReactNativeWebLite"
-flag seen below instead and get big bundle size savings + concurrent mode support.
-Then you can remove excludeReactNativeWebExports.
+// If you want a simpler setup, you can try the experimental "useReactNativeWebLite"
+// flag seen below instead and get big bundle size savings + concurrent mode support.
+// Then you can remove excludeReactNativeWebExports.
 
-Cheers 🍻
+// Cheers 🍻
 
-`)
+// `)
 
 const transform = withPlugins([
   withPWA({
