@@ -1,7 +1,7 @@
 import { store } from 'app/arca/store'
 import { Realgame } from 'app/arca/valley/Realgame'
+import { Hud } from 'arca/valley/hud'
 import { PerspectiveCamera } from 'three'
-// import { Hud } from 'views/hud/Hud'
 import { Canvas } from '@react-three/fiber/native'
 
 export const ValleyScreen = () => {
@@ -19,7 +19,7 @@ export const ValleyScreen = () => {
       >
         <></>
       </Canvas>
-      {/* <Hud /> */}
+      <Hud />
     </>
   )
 }

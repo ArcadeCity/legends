@@ -70,13 +70,14 @@ export class EntityManager {
       }
     }
 
-    for (let i = 0; i < dead.length; ++i) {
-      const e = dead[i]
+    // for (let i = 0; i < dead.length; ++i) {
+    //   const e = dead[i]
 
-      delete this._entitiesMap[e.Name]
+    //   delete this._entitiesMap[e.Name]
 
-      e.Destroy()
-    }
+    //   e.Destroy()
+    //   console.log('DEAD')
+    // }
 
     this._entities = alive
   }
