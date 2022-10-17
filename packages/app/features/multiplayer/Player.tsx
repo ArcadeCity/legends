@@ -115,16 +115,10 @@ export const Player = () => {
 }
 
 const _CalculateIdealOffset = (target: THREE.Group) => {
-  const idealOffset = new THREE.Vector3(-0, 5, -4)
-
-  // create a quaternion from the target group's rotation
-  // const quaternion = new THREE.Quaternion()
-  // target.getWorldQuaternion(quaternion)
+  const idealOffset = new THREE.Vector3(-0, 3, -4)
 
   const position = new THREE.Vector3()
   target.getWorldPosition(position)
-
-  console.log('target position', position)
 
   idealOffset.applyQuaternion(target.quaternion)
   idealOffset.add(position)
@@ -133,13 +127,12 @@ const _CalculateIdealOffset = (target: THREE.Group) => {
 }
 
 const _CalculateIdealLookat = (target: THREE.Group) => {
-  const idealLookat = new THREE.Vector3(0, 1, 20)
+  const idealLookat = new THREE.Vector3(0, 1, 6)
 
-  // create a quaternion from the target group's rotation
-  // const quaternion = new THREE.Quaternion()
-  // target.getWorldQuaternion(quaternion)
+  const position = new THREE.Vector3()
+  target.getWorldPosition(position)
 
   idealLookat.applyQuaternion(target.quaternion)
-  idealLookat.add(target.position)
+  idealLookat.add(position)
   return idealLookat
 }
