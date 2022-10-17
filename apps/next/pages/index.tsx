@@ -1,34 +1,14 @@
-import Realgame from 'app/arca/realgame/Realgame'
-import { Hud } from 'app/features/hud/Hud'
+import { sockTest } from 'app/features/map/sockTest'
+import { MultiplayerDemo } from 'app/features/multiplayer/MultiplayerDemo'
 import { useEffect } from 'react'
 
-const Page = () => {
+export default function Multi() {
   useEffect(() => {
-    const canvasElement = document.getElementById('realgame') as HTMLCanvasElement
-    const realgame = new Realgame(canvasElement)
+    sockTest()
   }, [])
   return (
-    <>
-      <Hud />
-      <canvas id="realgame" className="h-screen w-screen"></canvas>
-      <div id="overlay">
-        <div className="center">
-          <div id="loader" className="lds-ripple">
-            <div></div>
-            <div></div>
-          </div>
-        </div>
-      </div>
-    </>
+    <div style={{ height: '100vh', width: '100vw' }}>
+      <MultiplayerDemo />
+    </div>
   )
-}
-
-export default Page
-
-export async function getStaticProps() {
-  return {
-    props: {
-      title: 'Arcade City',
-    },
-  }
 }
