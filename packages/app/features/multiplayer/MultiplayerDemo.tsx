@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { Box, OrbitControls, Torus } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Physics, RigidBody } from '@react-three/rapier'
+import { Skybox } from '../grid/Skybox'
 import { Ground } from './Ground'
 import { Player } from './Player'
 
@@ -18,6 +19,7 @@ export const MultiplayerDemo = () => {
         </Physics>
       </Suspense>
 
+      <Skybox />
       <OrbitControls />
     </Canvas>
   )
