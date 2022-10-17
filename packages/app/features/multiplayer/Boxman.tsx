@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useAnimations, useGLTF } from '@react-three/drei'
 
 const path = '/build/assets/boxman.glb'
@@ -7,6 +7,9 @@ export function Boxman(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF(path)
   const { actions } = useAnimations(animations, group)
+  useEffect(() => {
+    actions.idle.play()
+  }, [])
   if (!nodes || !nodes.game_man) return <></>
   return (
     <group ref={group} {...props} dispose={null}>
