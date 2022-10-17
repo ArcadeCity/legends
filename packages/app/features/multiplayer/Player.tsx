@@ -24,6 +24,8 @@ export const Player = () => {
         y: 0,
         z: (forward ? -torque : 0) + (backward ? torque : 0),
       })
+
+      if (jump) player.current.applyImpulse({ x: 0, y: 2 * torque, z: 0 })
     }
   })
   return (
