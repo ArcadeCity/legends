@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import { Box } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { RigidBody, RigidBodyApi, Vector3Array } from '@react-three/rapier'
 import { Boxman } from './Boxman'
@@ -7,7 +8,7 @@ import { usePersonControls } from './usePersonControls'
 export const Player = () => {
   const player = useRef<RigidBodyApi>(null)
   const { forward, backward, left, right, jump } = usePersonControls()
-  const torque = 0.001
+  const torque = 0.2
   useFrame(() => {
     if (player.current) {
       // const vector3array: Vector3Array = [0, 0, forward ? -torque : backward ? torque : 0]
@@ -29,8 +30,12 @@ export const Player = () => {
     }
   })
   return (
-    <RigidBody ref={player} position={[0, 4, 0]} colliders={'hull'} restitution={0.3}>
-      <Boxman />
+    <RigidBody ref={player} position={[0, 4, 0]} colliders={'hull'} restitution={0.1}>
+      <Box args={[1.5, 0.2, 3]}>
+        {/* Make the box invisible */}
+        <meshBasicMaterial attach="material" color="blue" transparent opacity={0.4} />
+        <Boxman />
+      </Box>
     </RigidBody>
   )
 }
