@@ -115,7 +115,7 @@ export const Player = () => {
 }
 
 const _CalculateIdealOffset = (target: THREE.Group) => {
-  const idealOffset = new THREE.Vector3(-0, 3, -4)
+  const idealOffset = new THREE.Vector3(-0, 1, -4)
 
   const position = new THREE.Vector3()
   target.getWorldPosition(position)
@@ -127,7 +127,7 @@ const _CalculateIdealOffset = (target: THREE.Group) => {
 }
 
 const _CalculateIdealLookat = (target: THREE.Group) => {
-  const idealLookat = new THREE.Vector3(0, 1, 6)
+  const idealLookat = new THREE.Vector3(0, 2, 7)
 
   const position = new THREE.Vector3()
   target.getWorldPosition(position)
