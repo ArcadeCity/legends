@@ -1,7 +1,8 @@
 import { useRef } from 'react'
-import { Box } from '@react-three/drei'
+import { Box, useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { RigidBody, RigidBodyApi } from '@react-three/rapier'
+import { Boxman } from './Boxman'
 import { usePersonControls } from './usePersonControls'
 
 export const Player = () => {
@@ -19,11 +20,14 @@ export const Player = () => {
       if (jump) player.current.applyTorqueImpulse({ x: 0, y: 5, z: 0 })
     }
   })
+  const gltf = useGLTF('/build/assets/boxman.glb')
+  console.log(gltf)
   return (
     <RigidBody ref={player} position={[0, 4, 0]} colliders={'hull'} restitution={0.3}>
-      <Box castShadow>
+      <Boxman />
+      {/* <Box castShadow>
         <meshStandardMaterial color="darkorange" />
-      </Box>
+      </Box> */}
     </RigidBody>
   )
 }
