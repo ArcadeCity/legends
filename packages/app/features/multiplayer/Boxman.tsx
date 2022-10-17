@@ -14,7 +14,7 @@ export function Boxman(props) {
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <group name="Armature" scale={0.38}>
+        <group name="Armature" scale={0.38} rotation={[0, Math.PI, 0]}>
           <primitive object={nodes.root} />
           <skinnedMesh
             name="game_man"
