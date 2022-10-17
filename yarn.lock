@@ -2497,6 +2497,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pmndrs/cannon-worker-api@npm:^2.1.0":
+  version: 2.2.0
+  resolution: "@pmndrs/cannon-worker-api@npm:2.2.0"
+  peerDependencies:
+    three: ">=0.139"
+  checksum: 0994e46fe71d51521d1c9e2e591711b1514c6a54b724efd022d775f5f283bed158051338e89db7243b0472ba84f702148918448d06329c216984bb96561e8196
+  languageName: node
+  linkType: hard
+
 "@protobufjs/aspromise@npm:^1.1.1, @protobufjs/aspromise@npm:^1.1.2":
   version: 1.1.2
   resolution: "@protobufjs/aspromise@npm:1.1.2"
@@ -2956,6 +2965,21 @@ __metadata:
   version: 9.5.5
   resolution: "@react-spring/types@npm:9.5.5"
   checksum: 7fa92982ffed216cfeff7817fc6703200d0ee7925e376d394729b804ec621f09d0800b67d1942b5b7c3b5df5396f7206c01aebd343ba47da619ad2b6363b7bc3
+  languageName: node
+  linkType: hard
+
+"@react-three/cannon@npm:6.4.0":
+  version: 6.4.0
+  resolution: "@react-three/cannon@npm:6.4.0"
+  dependencies:
+    "@pmndrs/cannon-worker-api": ^2.1.0
+    cannon-es: ^0.20.0
+    cannon-es-debugger: ^1.0.0
+  peerDependencies:
+    "@react-three/fiber": ">=8"
+    react: ">=18"
+    three: ">=0.139"
+  checksum: f40d0688c3b1323a28d8715623fe1e65d68e52dfdd4b1776b016f6b92b4995c5657d16022c507cec5d0477cf36c184f2a741f8244f75021024c3e874a43aef17
   languageName: node
   linkType: hard
 
@@ -4746,6 +4770,7 @@ __metadata:
     "@my/ui": "*"
     "@react-navigation/native": ^6.0.11
     "@react-navigation/native-stack": ^6.7.0
+    "@react-three/cannon": 6.4.0
     "@react-three/drei": ^9.29.1
     "@react-three/fiber": ^8.7.2
     "@react-three/postprocessing": 2.6.2
@@ -5637,6 +5662,27 @@ __metadata:
   version: 1.0.30001418
   resolution: "caniuse-lite@npm:1.0.30001418"
   checksum: 03380a9ba50b1abd0081e76bfdf331bfb2c28f2277ce5eead5b83960c4db9f1fbbd84a536efa6f8f1fe2c038bc01129d6c42d17f8323fe99a016a5da3829c4bc
+  languageName: node
+  linkType: hard
+
+"cannon-es-debugger@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "cannon-es-debugger@npm:1.0.0"
+  peerDependencies:
+    cannon-es: 0.x
+    three: 0.x
+    typescript: ">=3.8"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 4d50b1250db46e5f7f005980ba38bcb5b21682c8851bef7e6077a1c20c7490ed05dcd286ca36f47cb7c5f9de47ff77b633c18c49ef6b1b44297985a9f7b5f58b
+  languageName: node
+  linkType: hard
+
+"cannon-es@npm:^0.20.0":
+  version: 0.20.0
+  resolution: "cannon-es@npm:0.20.0"
+  checksum: a11c2a51d8f4bf314fdbe671dd03e025513e3ab98621d3260c06f2c2a11922c67bc670f98e866a21919d966ba9b19aade5b7c3f9cf507a2ed7499c85eb8934bb
   languageName: node
   linkType: hard
 
