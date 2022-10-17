@@ -1579,6 +1579,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dimforge/rapier3d-compat@npm:0.9.0":
+  version: 0.9.0
+  resolution: "@dimforge/rapier3d-compat@npm:0.9.0"
+  checksum: 03d71f69760fa4ea7e17af5deb6277f2b201f7c343709fda7a6b211876480b53c454a468e5b23518200176a203652416ae39ea7a0ef971fb37d80c3744a7daf8
+  languageName: node
+  linkType: hard
+
 "@egjs/hammerjs@npm:^2.0.17":
   version: 2.0.17
   resolution: "@egjs/hammerjs@npm:2.0.17"
@@ -2497,6 +2504,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pmndrs/cannon-worker-api@npm:^2.1.0":
+  version: 2.2.0
+  resolution: "@pmndrs/cannon-worker-api@npm:2.2.0"
+  peerDependencies:
+    three: ">=0.139"
+  checksum: 0994e46fe71d51521d1c9e2e591711b1514c6a54b724efd022d775f5f283bed158051338e89db7243b0472ba84f702148918448d06329c216984bb96561e8196
+  languageName: node
+  linkType: hard
+
 "@protobufjs/aspromise@npm:^1.1.1, @protobufjs/aspromise@npm:^1.1.2":
   version: 1.1.2
   resolution: "@protobufjs/aspromise@npm:1.1.2"
@@ -2959,6 +2975,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-three/cannon@npm:6.4.0":
+  version: 6.4.0
+  resolution: "@react-three/cannon@npm:6.4.0"
+  dependencies:
+    "@pmndrs/cannon-worker-api": ^2.1.0
+    cannon-es: ^0.20.0
+    cannon-es-debugger: ^1.0.0
+  peerDependencies:
+    "@react-three/fiber": ">=8"
+    react: ">=18"
+    three: ">=0.139"
+  checksum: f40d0688c3b1323a28d8715623fe1e65d68e52dfdd4b1776b016f6b92b4995c5657d16022c507cec5d0477cf36c184f2a741f8244f75021024c3e874a43aef17
+  languageName: node
+  linkType: hard
+
 "@react-three/drei@npm:^9.29.1":
   version: 9.35.1
   resolution: "@react-three/drei@npm:9.35.1"
@@ -3041,6 +3072,21 @@ __metadata:
     react: ">=17.0"
     three: ">=0.136.0"
   checksum: 5916759abb01274416ef06d325f6a1e21660710611a8edbce4c0564836a8762d7397e7b44a5ae876a87c92642fadd5900a338981fba9445af4ef02ff4912eaac
+  languageName: node
+  linkType: hard
+
+"@react-three/rapier@npm:0.8.2":
+  version: 0.8.2
+  resolution: "@react-three/rapier@npm:0.8.2"
+  dependencies:
+    "@dimforge/rapier3d-compat": 0.9.0
+    three-stdlib: ^2.15.0
+    use-asset: ^1.0.4
+  peerDependencies:
+    "@react-three/fiber": ^8.0.12
+    react: ^18.0.0
+    three: ">=0.139.2"
+  checksum: 4949c225ec44c8ef5868f24b87dd769171fbf64d1601e628c434c0a0436d66562b711ed44d83af65f241bf94406402ba0bc0d6647e056a9ccd0f1d7b2ce8f591
   languageName: node
   linkType: hard
 
@@ -4746,9 +4792,11 @@ __metadata:
     "@my/ui": "*"
     "@react-navigation/native": ^6.0.11
     "@react-navigation/native-stack": ^6.7.0
+    "@react-three/cannon": 6.4.0
     "@react-three/drei": ^9.29.1
     "@react-three/fiber": ^8.7.2
     "@react-three/postprocessing": 2.6.2
+    "@react-three/rapier": 0.8.2
     "@tamagui/animations-react-native": 1.0.1-beta.191
     "@tamagui/colors": 1.0.1-beta.191
     "@tamagui/feather-icons": 1.0.1-beta.191
@@ -5637,6 +5685,27 @@ __metadata:
   version: 1.0.30001418
   resolution: "caniuse-lite@npm:1.0.30001418"
   checksum: 03380a9ba50b1abd0081e76bfdf331bfb2c28f2277ce5eead5b83960c4db9f1fbbd84a536efa6f8f1fe2c038bc01129d6c42d17f8323fe99a016a5da3829c4bc
+  languageName: node
+  linkType: hard
+
+"cannon-es-debugger@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "cannon-es-debugger@npm:1.0.0"
+  peerDependencies:
+    cannon-es: 0.x
+    three: 0.x
+    typescript: ">=3.8"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 4d50b1250db46e5f7f005980ba38bcb5b21682c8851bef7e6077a1c20c7490ed05dcd286ca36f47cb7c5f9de47ff77b633c18c49ef6b1b44297985a9f7b5f58b
+  languageName: node
+  linkType: hard
+
+"cannon-es@npm:^0.20.0":
+  version: 0.20.0
+  resolution: "cannon-es@npm:0.20.0"
+  checksum: a11c2a51d8f4bf314fdbe671dd03e025513e3ab98621d3260c06f2c2a11922c67bc670f98e866a21919d966ba9b19aade5b7c3f9cf507a2ed7499c85eb8934bb
   languageName: node
   linkType: hard
 
@@ -15284,7 +15353,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three-stdlib@npm:^2.17.3, three-stdlib@npm:^2.8.11":
+"three-stdlib@npm:^2.15.0, three-stdlib@npm:^2.17.3, three-stdlib@npm:^2.8.11":
   version: 2.17.3
   resolution: "three-stdlib@npm:2.17.3"
   dependencies:
@@ -15926,6 +15995,17 @@ __metadata:
     querystringify: ^2.1.1
     requires-port: ^1.0.0
   checksum: fbdba6b1d83336aca2216bbdc38ba658d9cfb8fc7f665eb8b17852de638ff7d1a162c198a8e4ed66001ddbf6c9888d41e4798912c62b4fd777a31657989f7bdf
+  languageName: node
+  linkType: hard
+
+"use-asset@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "use-asset@npm:1.0.4"
+  dependencies:
+    fast-deep-equal: ^3.1.3
+  peerDependencies:
+    react: ">=17.0"
+  checksum: dc87a1ca3aa0af05765255b80c9f027c42b533da3e887362af17e7d9423edfedf11d48d00a181e32b067f66c5036d0442d551394d6f7540e3f5dc6a1a3ebfa9a
   languageName: node
   linkType: hard
 
