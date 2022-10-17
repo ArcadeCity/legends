@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { Box, OrbitControls, Torus } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Physics, RigidBody } from '@react-three/rapier'
+import { Ground } from './Ground'
 import { Player } from './Player'
 
 export const MultiplayerDemo = () => {
@@ -13,13 +14,7 @@ export const MultiplayerDemo = () => {
       <Suspense fallback={null}>
         <Physics>
           <Player />
-
-          <RigidBody position={[0, -2, 0]} type="kinematicPosition">
-            {/* Add a green material */}
-            <Box args={[20, 0.5, 20]}>
-              <meshStandardMaterial color="darkgreen" />
-            </Box>
-          </RigidBody>
+          <Ground />
         </Physics>
       </Suspense>
 
