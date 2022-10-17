@@ -6,9 +6,12 @@ import { RigidBody, RigidBodyApi, Vector3Array } from '@react-three/rapier'
 import { Boxman } from './Boxman'
 import { usePersonControls } from './usePersonControls'
 
+let currentPosition = new THREE.Vector3()
+let currentLookat = new THREE.Vector3()
+
 export const Player = () => {
   const player = useRef<RigidBodyApi>(null)
-  const box = useRef<Group>(null)
+  const box = useRef<THREE.Group>(null)
   const { forward, backward, left, right, jump } = usePersonControls()
   const torque = 0.2
 
@@ -24,16 +27,59 @@ export const Player = () => {
   //   }
   // })
 
-  useFrame(() => {
+  useFrame((state, delta) => {
     if (box.current) {
-      const position = new THREE.Vector3()
-      box.current.getWorldPosition(position)
-      // console.log(box.current.getWorldPosition(position))
+      const idealOffset = _CalculateIdealOffset(box.current)
+      const idealLookat = _CalculateIdealLookat(box.current)
+      // console.log(idealLookat)
 
-      // console.log('camera?', camera.position)
-      // camera.position.x = box.current.position.x
-      // console.log('BOX POSITION?', box.current.position)
-      camera.lookAt(position)
+      const timeElapsed = delta
+      // state.clock.getElapsedTime()
+      // console.log(timeElapsed)
+
+      const t = 1.0 - Math.pow(0.01, timeElapsed)
+
+      currentPosition.lerp(idealLookat, 0.1)
+      currentLookat.lerp(idealOffset, 0.1)
+
+      state.camera.position.copy(currentPosition)
+      state.camera.lookAt(currentLookat)
+
+      // state.camera.position.lerp(idealOffset, 0.1)
+
+      // state.camera.lookAt(idealLookat)
+
+      state.camera.updateProjectionMatrix()
+
+      // this._currentPosition.lerp(idealOffset, t)
+      // this._currentLookat.lerp(idealLookat, t)
+
+      // this._camera.position.copy(this._currentPosition)
+      // this._camera.lookAt(this._currentLookat)
+
+      // const position = new THREE.Vector3()
+      // box.current.getWorldPosition(position)
+      // // console.log(box.current.getWorldPosition(position))
+
+      // // console.log('camera?', camera.position)
+      // // camera.position.x = box.current.position.x
+      // // console.log('BOX POSITION?', box.current.position)
+
+      // // Put the camera a little behind and above the box via lerp for smooth animation.
+      // state.camera.position.lerp(new THREE.Vector3(position.x, position.y + 2, position.z - 4), 0.1)
+
+      // position.x = position.x + Math.sin(state.clock.getElapsedTime() * 0.2)
+      // position.y = position.y + Math.cos(state.clock.getElapsedTime() * 0.2)
+      // position.z = position.z + Math.cos(state.clock.getElapsedTime() * 0.2)
+      // // position.z = Math.cos(state.clock.getElapsedTime() * 2)
+
+      // state.camera.lookAt(position)
+      // state.camera.updateProjectionMatrix()
+      // camera.position.x = position.x - 2
+      // camera.position.y = position.y + 2
+      // camera.position.z = position.z - 2
+
+      // camera.lookAt(position)
     }
 
     if (player.current) {
@@ -66,4 +112,34 @@ export const Player = () => {
       </group>
     </RigidBody>
   )
+}
+
+const _CalculateIdealOffset = (target: THREE.Group) => {
+  const idealOffset = new THREE.Vector3(-0, 5, -4)
+
+  // create a quaternion from the target group's rotation
+  // const quaternion = new THREE.Quaternion()
+  // target.getWorldQuaternion(quaternion)
+
+  const position = new THREE.Vector3()
+  target.getWorldPosition(position)
+
+  console.log('target position', position)
+
+  idealOffset.applyQuaternion(target.quaternion)
+  idealOffset.add(position)
+
+  return idealOffset
+}
+
+const _CalculateIdealLookat = (target: THREE.Group) => {
+  const idealLookat = new THREE.Vector3(0, 1, 20)
+
+  // create a quaternion from the target group's rotation
+  // const quaternion = new THREE.Quaternion()
+  // target.getWorldQuaternion(quaternion)
+
+  idealLookat.applyQuaternion(target.quaternion)
+  idealLookat.add(target.position)
+  return idealLookat
 }
