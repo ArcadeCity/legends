@@ -20,8 +20,6 @@ export const Player = () => {
       if (jump) player.current.applyTorqueImpulse({ x: 0, y: 5, z: 0 })
     }
   })
-  const gltf = useGLTF('/build/assets/boxman.glb')
-  console.log(gltf)
   return (
     <RigidBody ref={player} position={[0, 4, 0]} colliders={'hull'} restitution={0.3}>
       <Boxman />
