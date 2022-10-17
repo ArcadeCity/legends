@@ -7,7 +7,7 @@ import { usePersonControls } from './usePersonControls'
 export const Player = () => {
   const player = useRef<RigidBodyApi>(null)
   const { forward, backward, left, right, jump } = usePersonControls()
-  const torque = 0.1
+  const torque = 0.001
   useFrame(() => {
     if (player.current) {
       player.current.applyTorqueImpulse({
@@ -15,7 +15,7 @@ export const Player = () => {
         y: 0,
         z: (forward ? torque : 0) + (backward ? -torque : 0),
       })
-      if (jump) player.current.applyTorqueImpulse({ x: 0, y: 5, z: 0 })
+      if (jump) player.current.applyTorqueImpulse({ x: 0, y: 5 * torque, z: 0 })
     }
   })
   return (
