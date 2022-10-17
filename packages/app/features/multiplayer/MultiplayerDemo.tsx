@@ -30,7 +30,7 @@ export const MultiplayerDemo = () => {
 
       <Skybox />
       <Effects />
-      <OrbitControls />
+      {/* <OrbitControls /> */}
     </Canvas>
   )
 }
